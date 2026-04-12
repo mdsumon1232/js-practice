@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculate</title>
+  </head>
+  <body>
+    <input type="number" placeholder="Enter Number 1" id="input1" />
+    <input type="number" placeholder="Enter Number 2" id="input2" />
+
+    <p>Result: <span id="result">0</span></p>
+
+    <button id="multipication">Multiplication</button>
+
+    <button id="division">Division</button>
+
+    <script>
+      let resultContainer = document.getElementById("result");
+
+      const multipication = document.getElementById("multipication");
+      const division = document.getElementById("division");
+
+      multipication.addEventListener("click", () => {
+        let input1 = document.getElementById("input1").value;
+        let input2 = document.getElementById("input2").value;
+        input1 = parseFloat(input1);
+        input2 = parseFloat(input2);
+        let result = input1 * input2;
+        resultContainer.textContent = result;
+      });
+      division.addEventListener("click", () => {
+        let input1 = document.getElementById("input1").value;
+        let input2 = document.getElementById("input2").value;
+        input1 = parseFloat(input1);
+        input2 = parseFloat(input2);
+        let result = input1 / input2;
+        resultContainer.textContent = result;
+      });
+    </script>
+  </body>
+</html>
