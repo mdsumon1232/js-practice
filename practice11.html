@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>convert celsius to fahrenheit</title>
+  </head>
+  <body>
+    <input type="number" id="celsius" placeholder="Enter Celsius" />
+    <p id="resultContainer"></p>
+    <button id="convertBtn">Convert</button>
+
+    <script>
+      const btn = document.getElementById("convertBtn");
+      const resultContainer = document.getElementById("resultContainer");
+
+      btn.addEventListener("click", () => {
+        let inputValue = document.getElementById("celsius");
+
+        inputValue = parseFloat(inputValue.value);
+        if (inputValue === NaN) {
+          resultContainer.innerText = "Please enter a valid number";
+        } else {
+          const fahrenheit = (inputValue * 9) / 5 + 32;
+          resultContainer.innerText = `${inputValue}C to Farenheit is ${fahrenheit}F `;
+        }
+      });
+    </script>
+  </body>
+</html>
