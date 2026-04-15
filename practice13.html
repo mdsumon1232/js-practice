@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>file extension find</title>
+  </head>
+  <body>
+    <input type="file" id="file" placeholder="Enter your file here......" />
+
+    <button id="submitBtn" onclick="getFile()">Submit</button>
+
+    <script>
+      function getFile() {
+        const fileInput = document.getElementById("file").files[0].name;
+
+        const fileExtension = fileInput.split(".").pop().toLowerCase();
+        if (fileExtension != "png") {
+          console.log("Please input a png file");
+        } else {
+          console.log(`file extension is ${fileExtension}`);
+        }
+      }
+    </script>
+  </body>
+</html>
