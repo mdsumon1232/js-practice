@@ -3,21 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>practice- 20</title>
+    <title>Practice 21</title>
   </head>
   <body>
     <script>
-      const text = prompt("Enter a text");
-      if (text.length < 1) {
-        alert("Word must be minimum 1 character long");
+      const text = prompt("Enter a word");
+
+      if (text === "" || text == null) {
+        alert("Please enter a valid text");
       } else if (text.length === 1) {
         alert(text);
       } else {
         const firstChar = text.at(0);
-        const lastChar = text.at(-1);
-        const middleChar = text.slice(1, -1);
 
-        const newText = lastChar + middleChar + firstChar;
+        const newText = firstChar + text + firstChar;
         alert(newText);
       }
     </script>
