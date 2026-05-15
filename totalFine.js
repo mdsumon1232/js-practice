@@ -9,5 +9,3 @@ const fare = (regularCost) =>{
     return totalFine;
 }
 }
-
-console.log(fare(200))
